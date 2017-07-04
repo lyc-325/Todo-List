@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myTodoList</title>
+	<link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" href="../node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css">
+</head>
+<body>
+	<div class="msg">
+    	<span class="msg-content"></span>
+    	<span class="anchor confirmed">知道了</span>
+	</div>
+	<div class="container"><!-- 总容器开始 -->
+		<h1>备忘录</h1>
+		<form class="add-task">
+			<input name="content" type="text" placeholder="e.g. 买西瓜" autofocus="" autocomplete="off">
+			<button type="submit">添加</button>
+		</form>
+		<div class="task-list"></div><!--清单列表结束-->
+		<div class="task-detail-mask" style="display: none;"></div>
+		<div class="task-detail" style="display: none;">
+			<form>
+				<div class="content">请示点</div>
+				<div class="input-item">
+					<input style="display: none;" type="text" name="content" value="请示点">
+				</div>
+				<div>
+					<div class="desc input-item">
+						<textarea name="desc"></textarea>
+					</div>
+				</div>	
+				<div class="remind input-item">
+					<label>提醒时间</label>
+					<input class="datetime" name="remind_date" type="text" value="">
+				</div>
+				<div class="input-item">
+					<button type="submit">更新</button>
+				</div>
+			</form>
+		</div><!-- 任务详情结束 -->
+	<button type="button" class="delete_button">删除已完成事件</button>
+
+<video src="alert.mp3" class="alerter"></video>
+<script src="../node_modules/_jquery@3.2.1@jquery/dist/jquery.js"></script>
+<script src="../node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript" src="../node_modules/store.js/store.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+</body>
+</html>
